@@ -1,0 +1,9 @@
+sequenceDiagram
+actor Auteur
+participant Systeme as Systeme
+Auteur->>Systeme: Accède à la page d'ajout d'article
+Systeme-->>Auteur: Affiche le formulaire
+Auteur->>Systeme:  L’Auteur saisit le titre, sélectonne la catégorie et le statut, ajoute une image et rédige le contenu
+Auteur->>Systeme: L’Auteur clique sur le bouton “Enregistrer l’article”
+Systeme-->>Auteur: Le système sauvegarte l’article dans la base de données
+Systeme-->>Auteur: Le système redirige l’Auteur vers la liste des artcles
