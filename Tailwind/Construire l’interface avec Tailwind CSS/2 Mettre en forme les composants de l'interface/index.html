@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Blog</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-800 text-white flex flex-col p-6 gap-4">
+
+            <h2 class="text-xl font-bold border-b border-gray-600 pb-4">
+                Admin Blog
+            </h2>
+
+            <nav class="flex flex-col gap-1">
+
+                <a href="#" class="px-3 py-2 rounded-lg hover:bg-gray-700 text-gray-300 hover:text-white transition-colors">
+                    Tableau de bord
+                </a>
+
+                <a href="#" class="px-3 py-2 rounded-lg bg-blue-600 text-white font-medium">
+                    Catégories
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Contenu principal -->
+        <div class="flex-1 flex flex-col">
+
+            <!-- Header -->
+            <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between shadow-sm">
+
+                <h1 class="text-lg font-semibold text-gray-800">
+                    Gestion des catégories
+                </h1>
+
+                <span class="text-sm text-gray-500">
+                    Admin
+                </span>
+
+            </header>
+
+            <!-- Main -->
+            <main class="flex-1 p-6">
+
+                <!-- Titre et bouton -->
+                <div class="flex items-center justify-between mb-6">
+
+                    <h2 class="text-2xl font-bold text-gray-800">
+                        Catégories
+                    </h2>
+
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        + Nouvelle catégorie
+                    </button>
+
+                </div>
+
+                <!-- Formulaire -->
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">
+                        Ajouter une catégorie
+                    </h3>
+
+                    <form class="flex flex-col gap-4">
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                Nom
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Nom de la catégorie"
+                                class="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                Description
+                            </label>
+
+                            <textarea
+                                placeholder="Description..."
+                                class="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            ></textarea>
+                        </div>
+
+                        <div>
+                            <button
+                                type="submit"
+                                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                            >
+                                Enregistrer
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Tableau -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+
+                    <table class="w-full">
+
+                        <thead class="bg-gray-50 text-left text-xs text-gray-500 uppercase">
+
+                            <tr>
+                                <th class="p-3">Nom</th>
+                                <th class="p-3">Description</th>
+                                <th class="p-3">Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody class="divide-y divide-gray-200">
+
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">Technologie</td>
+                                <td class="p-3">Articles tech</td>
+                                <td class="p-3">Modifier</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">Sport</td>
+                                <td class="p-3">Actualités sportives</td>
+                                <td class="p-3">Modifier</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3">Culture</td>
+                                <td class="p-3">Arts et culture</td>
+                                <td class="p-3">Modifier</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
