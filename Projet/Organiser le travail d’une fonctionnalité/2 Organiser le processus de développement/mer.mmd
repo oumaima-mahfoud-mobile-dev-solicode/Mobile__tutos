@@ -1,0 +1,16 @@
+graph LR
+    A["📋 CADRER<br/>Qu'est-ce qu'on fait ?<br/>─────────────<br/>Définir l'objectif et<br/>le périmètre CRUD"]
+    B["✏️ CONCEVOIR<br/>Comment on le fait ?<br/>─────────────<br/>Tâche 1 : Modèle de données<br/>Tâche 3 : Maquette HTML"]
+    C["⚙️ DÉVELOPPER<br/>Réaliser<br/>─────────────<br/>Tâche 2 : API CRUD<br/>Tâche 4 : Connexion form → API"]
+    D["🧪 TESTER<br/>Ça marche ?<br/>─────────────<br/>Tâche 5a : Tests techniques<br/>(comportement)"]
+    E["✅ VALIDER<br/>C'est conforme ?<br/>─────────────<br/>Tâche 5b : Validation métier<br/>(conformité au besoin)"]
+
+    A --> B --> C --> D --> E
+
+    A -.Livrable.-> A1["Objectif et livrable définis"]
+    B -.Livrable.-> B1["Modèle de données + Maquettes"]
+    C -.Livrable.-> C1["Code fonctionnel"]
+    D -.Livrable.-> D1["Liste d'anomalies (ou 0)"]
+    E -.Livrable.-> E1["Fonctionnalité acceptée"]
+
+    
