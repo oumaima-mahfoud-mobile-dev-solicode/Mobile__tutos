@@ -1,14 +1,13 @@
-     fetch('../backend/categories.php')
-    .then(Response => Response.json())
-    .then(categories => {
-        console.log(categories);
-        const liste = document.getElementById('categories');
-        categories.forEach(category =>  {
-            const li = document.createElement('li');
-            li.textContent = category.name;
-            liste.appendChild(li);
-        });
-    })
-    .catch(error => {
-        console.error("erreur : " , error);
+const ul = document.getElementById("categories")
+fetch("../backend/categories.php")
+.then(respense=>respense.json())
+.then(data =>{
+    data.forEach(dat => {
+        const li = document.createElement("li")
+        li.textContent= dat.name;
+        ul.appendChild(li)
+        
     });
+
+})
+ .catch( error => console.log(error));
