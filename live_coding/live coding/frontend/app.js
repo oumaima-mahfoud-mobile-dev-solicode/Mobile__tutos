@@ -1,56 +1,36 @@
-const btna = document.getElementById("btna")
-const form = document.getElementById("form")
-const nom = document.getElementById("nom")
+const ajouter = document.getElementById("btna");
+const form = document.getElementById("form");
+const nom = document.getElementById("nom");
 const description = document.getElementById("description")
+const  anuller = document.getElementById("an")
 const tbody = document.getElementById("tbody")
-const an = document.getElementById("an")
-const API = "../backend/api.php"
-btna.addEventListener('click', ()=>{
-    form.hidden=false
-    btna.hidden=true
+const API = "/backend/api.php"
+ajouter.addEventListener('click',()=>{
+    form.hidden=false;
+    ajouter.hidden=true;
 })
-an.addEventListener('click', ()=>{
-    form.hidden=true
-    btna.hidden=false
+anuller.addEventListener('click',()=>{
+    form.hidden=true;
+    ajouter.hidden=false
 })
 function charger(){
     fetch(API)
     .then(respence=>respence.json())
-    .then(datas=>{ 
+    .then(datas =>{
         datas.forEach(data => {
             tbody.insertAdjacentHTML(
                 "beforeend" ,
-                `<tr>
+                `
+                <tr>
                 <td>${data.nom}</td>
                 <td>${data.description}</td>
-                </tr>               `
-            )           
+                
+                </tr>
+                `
+            )
+            
         });
+       
     })
-}
-form.addEventListener("submit", (event)=>{
-
-    event.preventDefault()
-
-    const data = {
-        nom: nom.value,
-        description: description.value
-    }
-
-    fetch(API, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(datas => {
-        form.reset()
-        form.hidden = true
-        btna.hidden = false
-        charger()
-    })
-
-})
-charger()
+    .catch(error=>console.error(error))
+} charger()
