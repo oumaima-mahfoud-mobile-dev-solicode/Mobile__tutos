@@ -28,3 +28,11 @@ class Article {
     -string statut
     -DateTime date_creation
 }
+
+
+
+
+
+User "1" -- "0..1" Auteur : possède
+Auteur "1" -- "0..*" Article : rédige
+Categorie "1" -- "0..*" Article : contient
