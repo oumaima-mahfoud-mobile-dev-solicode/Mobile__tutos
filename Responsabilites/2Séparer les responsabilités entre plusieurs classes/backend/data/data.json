@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nom": "Robes",
+        "couleur": "rose",
+        "icone": "\ud83d\udc57"
+    },
+    {
+        "id": 2,
+        "nom": "Chaussures",
+        "couleur": "noir",
+        "icone": "\ud83d\udc5f"
+    },
+    {
+        "id": 3,
+        "nom": "Sacs",
+        "couleur": "rouge",
+        "icone": "\ud83d\udc5c"
+    },
+    {
+        "id": 10,
+        "nom": "Livres",
+        "couleur": "#ff0000",
+        "icone": "book"
+    }
+]
