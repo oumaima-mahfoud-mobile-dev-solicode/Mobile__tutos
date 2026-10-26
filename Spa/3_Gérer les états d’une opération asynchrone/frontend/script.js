@@ -19,7 +19,7 @@
                 .then(response =>  response.json())
                 .then(data => {
                     console.log(data)
-                    message.textContent = 'Succès : ' + data.title +  '  id : ' + data.id;
+                    message.textContent = 'Succès : ' + data.title +  'id : ' + data.id;
                 })
                 .catch(error => {
                     message.textContent = 'Une erreur est survenue.';
